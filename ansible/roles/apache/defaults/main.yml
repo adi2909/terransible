@@ -1,0 +1,21 @@
+# roles/httpd/defaults/main.yml
+---
+
+# Scripting support
+httpd_scripting: 'none'
+
+# Main configuration
+httpd_ServerRoot: '/etc/httpd'
+httpd_Listen: 80
+httpd_ServerAdmin: root@localhost
+httpd_ServerTokens: Prod
+httpd_DocumentRoot: '/var/www/html'
+
+httpd_ErrorLog: logs/error_log
+httpd_AccessLog: logs/access_log
+httpd_LogLevel: warn
+
+httpd_StatusEnable: false
+httpd_StatusLocation: '/server-status'
+httpd_StatusRequire: 'host localhost'
+httpd_ExtendedStatus: on

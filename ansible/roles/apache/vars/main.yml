@@ -1,0 +1,13 @@
+---
+
+httpd_packages:
+  - httpd
+
+httpd_scripting_packages:
+  none: []
+  php:
+    - php
+    - php-xml
+
+httpd_config: /etc/httpd/conf/httpd.conf
+httpd_status_config: /etc/httpd/conf.d/status.conf

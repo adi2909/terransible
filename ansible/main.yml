@@ -3,15 +3,13 @@
 
 # Apply common configuration to all hosts.
 - hosts: localhost
+  become: true
   vars:
     tomcat_version: 8.5.23
     tomcat_users:
       - username: "tomcat"
         password: "yolo"
         roles: "tomcat,admin,manager,manager-gui"
-      - username: "someuser"
-        password: "1234"
-        roles: "tomcat"
   roles:
     - tomcat
     - apache
